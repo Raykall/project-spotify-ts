@@ -1,0 +1,28 @@
+@import "styles/variaveis";
+
+.category {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 10px 30px;
+  &__button {
+    align-items: center;
+    background-color: #565656;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: bold;
+    height: 30px;
+    justify-content: center;
+    width: 150px;
+    &--ativo {
+      background-color: #509bf5;
+      color: $color-white;
+    }
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.04);
+    }
+  }
+}
