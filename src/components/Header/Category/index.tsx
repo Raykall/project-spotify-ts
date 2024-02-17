@@ -1,31 +1,29 @@
 import styles from "./Category.module.scss";
 import categoryButtons from "data/category.json";
 import classNames from "classnames";
+import { useApplication } from "hooks/useApplication";
 
-type IOpcao = (typeof categoryButtons)[0];
+const Category = () => {
+  const { setCurrentCategory, currentCategory } = useApplication();
 
-interface Props {
-  category: number | null;
-  setCategory: React.Dispatch<React.SetStateAction<number | null>>;
-}
-
-const Category = ({ category, setCategory }: Props) => {
-  function selecionarCategory(opcao: IOpcao) {
-    if (category === opcao.id) {
-      return setCategory(null);
+  const handleClickButton = (id: string) => {
+    if (id === currentCategory) {
+      setCurrentCategory("");
+      return;
     }
-    return setCategory(opcao.id);
-  }
+    setCurrentCategory(id);
+  };
+
   return (
     <div className={styles.category}>
       {categoryButtons.map((opcao) => (
         <button
           className={classNames({
             [styles.category__button]: true,
-            [styles["category__button--ativo"]]: category === opcao.id,
+            [styles["category__button--ativo"]]: currentCategory === opcao.id,
           })}
           key={opcao.id}
-          onClick={() => selecionarCategory(opcao)}
+          onClick={() => handleClickButton(opcao.id)}
         >
           {opcao.label}
         </button>

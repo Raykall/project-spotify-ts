@@ -1,0 +1,104 @@
+@import "styles/variaveis";
+
+.hidden {
+  display: block;
+  padding: 20px 40px;
+
+  .grid__container {
+    grid-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    min-width: 767px;
+
+    .artist__card {
+      background: #181818;
+      border-radius: 8px;
+      -ms-flex: 1;
+      flex: 1;
+      isolation: isolate;
+      padding: 16px;
+      position: relative;
+      transition: background-color 0.3s ease;
+      width: 100%;
+
+      .card__img {
+        padding-bottom: 100%;
+        position: relative;
+        width: 100%;
+        margin-bottom: 16px;
+
+        .artist__img {
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          border-radius: 50%;
+        }
+
+        .play {
+          position: relative;
+
+          .fa__play {
+            position: absolute;
+            right: 20px;
+            top: 210px;
+            padding: 40px;
+            background-color: #1db954;
+            border-radius: 100%;
+            font-size: 14px;
+            opacity: 0;
+            transition: all ease 0.4s;
+          }
+
+          .fa__play:hover {
+            opacity: 0.9;
+            transform: translateY(-20px);
+            padding: 25px;
+            cursor: pointer;
+          }
+        }
+      }
+      .card__text {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        min-height: 62px;
+
+        a {
+          display: inline-block;
+          max-width: 100%;
+          vertical-align: middle;
+          display: flex;
+          flex-direction: column;
+          text-decoration: none;
+          color: $color-white;
+
+          .artist__name {
+            box-sizing: border-box;
+            margin-block: 0px;
+            font-size: 20px;
+            font-weight: 700;
+            padding-block-end: 8px;
+          }
+
+          .artist__categorie {
+            color: #6a6a6a;
+            font-weight: 400;
+            font-size: 0.875rem;
+          }
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .artist__card:hover {
+      background-color: #252525;
+      opacity: 1;
+    }
+  }
+}

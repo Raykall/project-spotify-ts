@@ -3,15 +3,18 @@ import "./App.css";
 import Sidebar from "./components/Siderbar";
 import Footer from "components/Footer";
 import ContentMain from "components/ContentMain";
+import { ApplicationProvider } from "hooks/useApplication";
 
 function App() {
   return (
-    <div className="App">
-      <Sidebar />
-      <Header />
-      <ContentMain />
-      <Footer />
-    </div>
+    <ApplicationProvider>
+      <div className="App">
+        <Sidebar />
+        <Header />
+        <ContentMain  />
+        <Footer />
+      </div>
+    </ApplicationProvider>
   );
 }
 

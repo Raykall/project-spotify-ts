@@ -2,85 +2,76 @@
     {
       "label": "Boas festas",
       "id": 1,
-      "category": {
-        "id": 1,
-        "label": "Ritmo"
-      }
+      "categoryId": "1"
     },
     {
         "label": "Feitos para você",
         "id": 2,
-        "category": {
-          "id": 2,
-          "label": "Batida"
-        }
+        "categoryId": "2"
     },
     {
       "label": "Lançamentos",
       "id": 3,
-      "category": {
-        "id": 1,
-        "label": "Ritmo"
-      }
+      "categoryId": "2"
     },
     {
       "label": "Creators",
       "id": 4,
-      "category": {
-        "id": 2,
-        "label": "Batida"
-      }
+      "categoryId": "4"
     },
     {
       "label": "Para treinar",
       "id": 5,
-      "category": {
-        "id": 2,
-        "label": "Batida"
-      }
+      "categoryId": "3"
     },
     {
       "label": "Podcasts",
       "id": 6,
-      "category": {
-        "id": 1,
-        "label": "Ritmo"
-      }
+      "categoryId": "3"
     },
     {
       "label": "Boas Festas",
-      "id": 7
+      "id": 7,
+      "categoryId": "2"
     },
     {
       "label": "Samba e pagode",
-      "id": 8
+      "id": 8,
+      "categoryId": "1"
     },
     {
       "label": "Funk",
-      "id": 9
+      "id": 9,
+      "categoryId": "1"
     },
     {
       "label": "MPB",
-      "id": 10
+      "id": 10,
+      "categoryId": "1"
     },
     {
       "label": "Rock",
-      "id": 11
+      "id": 11,
+      "categoryId": "1"
     },
     {
       "label": "Hip Hop",
-      "id": 12
+      "id": 12,
+      "categoryId": "1"
     },
     {
       "label": "Lançamentos",
-      "id": 13
+      "id": 13,
+      "categoryId": "1"
     },
     {
       "label": "Indie",
-      "id": 14
+      "id": 14,
+      "categoryId": "2"
     },
     {
       "label": "Relax",
-      "id": 15
+      "id": 15,
+      "categoryId": "1"
     }
 ]

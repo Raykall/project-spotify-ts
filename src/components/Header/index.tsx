@@ -1,12 +1,8 @@
-import { useState } from "react";
 import styles from "./Header.module.scss";
 import Search from "./Search";
 import Category from "./Category";
 
 const Header = () => {
-  const [search, setSearch] = useState("");
-  const [category, setCategory] = useState<number | null>(null);
-
   return (
     <nav className={styles.header}>
       <div className={styles.navigation}>
@@ -18,10 +14,10 @@ const Header = () => {
         </button>
 
         <div className={styles.header__main}>
-          <Search search={search} setSearch={setSearch} />
+          <Search  />
         </div>
         <div className={styles.header__categories}>
-          <Category category={category} setCategory={setCategory} />
+          <Category />
         </div>
       </div>
 

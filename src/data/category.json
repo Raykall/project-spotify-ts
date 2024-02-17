@@ -1,18 +1,18 @@
 [
     {
       "label": "Ritmo",
-      "id": 1
+      "id": "1"
     },
     {
       "label": "Batida",
-      "id": 2
+      "id": "2"
     },
     {
       "label": "Podcast",
-      "id": 3
+      "id": "3"
     },
     {
       "label": "Relax",
-      "id": 4
+      "id": "4"
     }
   ]
