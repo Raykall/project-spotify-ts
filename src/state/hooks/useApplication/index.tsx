@@ -5,6 +5,7 @@ interface ProviderProps {
   children: ReactNode;
 }
 
+
 interface ContextType {
   currentCategory: string;
   setCurrentCategory: React.Dispatch<React.SetStateAction<string>>;
@@ -15,6 +16,8 @@ interface ContextType {
 const ApplicationContext = React.createContext({} as ContextType);
 
 export const ApplicationProvider = ({ children }: ProviderProps) => {
+
+  
   const [currentCategory, setCurrentCategory] = useState<string>("");
   const [filterSearch, setFilterSearch] = useState<string>("");
 
@@ -25,7 +28,7 @@ export const ApplicationProvider = ({ children }: ProviderProps) => {
       filterSearch,
       setFilterSearch,
     };
-  }, [currentCategory, setCurrentCategory, filterSearch,setFilterSearch ]);
+  }, [ currentCategory, setCurrentCategory, filterSearch,setFilterSearch ]);
 
   return (
     <ApplicationContext.Provider value={value}>

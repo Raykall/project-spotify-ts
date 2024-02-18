@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import contentArtist from "data/artist.json";
 import { useMemo, useState } from "react";
-import { useApplication } from "hooks/useApplication";
+import { useApplication } from "state/hooks/useApplication";
 import classNames from "classnames";
 
 const ContentArtist = () => {
@@ -22,17 +22,39 @@ const ContentArtist = () => {
   }, [filterSearch]);
 
   return (
-    <div>
+    <div className={styles["container-card"]}>
       {listFilter.map((opcao) => (
         <div
           id="result-artist"
           className={classNames({
-            [styles.hidden]: true,
-            [styles["hidden--active"]]: filterSearch == "",
+            [styles.card]: true,
+            [styles["card--active"]]: filterSearch == "",
           })}
           key={opcao.id}
         >
-          <div className={styles.grid__container}>
+          <div className={styles.card__img}>
+            <img
+              className={styles.artist__img}
+              alt="imagem do artista"
+              src={opcao.urlImg}
+            />
+          </div>
+          <div className={styles.card__text}>
+            <a title={opcao.name} className={styles.vst} href="/#">
+              <h2 className={styles.artist__name} id="artist-name">
+                {opcao.name}
+              </h2>
+              <span className={styles.artist__categorie}>{opcao.genre}</span>
+            </a>
+          </div>
+          <div className={styles.play__icon}>
+            <div className={styles.play__circle}>
+              <div className={styles.triangle}>
+                <FontAwesomeIcon icon={faPlay}  />
+              </div>
+            </div>
+          </div>
+          {/* <div className={styles.grid__container}>
             <div className={styles.artist__card}>
               <div className={styles.card__img}>
                 <img
@@ -57,7 +79,7 @@ const ContentArtist = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       ))}
     </div>

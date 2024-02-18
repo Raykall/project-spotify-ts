@@ -1,8 +1,9 @@
 import { useMemo, useState } from "react";
 import styles from "./Item.module.scss";
-import content from "data/content.json";
-import { useApplication } from "hooks/useApplication";
+import content from "data/contentCards.json";
+import { useApplication } from "state/hooks/useApplication";
 import ContentItem from "./ContentItem";
+
 
 const ContentItens = () => {
   const [contentCard] = useState(content);

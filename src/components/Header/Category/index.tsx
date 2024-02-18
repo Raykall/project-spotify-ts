@@ -1,7 +1,7 @@
 import styles from "./Category.module.scss";
-import categoryButtons from "data/category.json";
+import categoryButtons from "data/categoryButtons.json";
 import classNames from "classnames";
-import { useApplication } from "hooks/useApplication";
+import { useApplication } from "state/hooks/useApplication";
 
 const Category = () => {
   const { setCurrentCategory, currentCategory } = useApplication();

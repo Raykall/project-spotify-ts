@@ -1,12 +1,13 @@
 @import "styles/variaveis";
 
 .sidebar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   padding: 12px;
   width: 300px;
+  
 
   &__navigation {
     background-color: $bg-black;
@@ -53,7 +54,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  padding: 4px 8px;
+  padding: 10px 10px;
   color: $color-b3;
   font-weight: 600;
   font-size: 14px;

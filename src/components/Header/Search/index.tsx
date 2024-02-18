@@ -1,4 +1,4 @@
-import { useApplication } from "hooks/useApplication";
+import { useApplication } from "state/hooks/useApplication";
 import styles from "./Seach.module.scss";
 
 const Search = () => {
