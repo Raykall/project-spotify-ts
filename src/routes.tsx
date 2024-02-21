@@ -1,13 +1,17 @@
 import Footer from "components/Footer";
+import Menu from "components/Menu";
 import Home from "pages/Home";
+import Subscribe from "pages/Subscribe";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function AppRouter() {
   return (
-    <main className="container">
+    <main>
       <Router>
+        <Menu />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
+          <Route path="subscribe" element={<Subscribe />} />
         </Routes>
         <Footer />
       </Router>

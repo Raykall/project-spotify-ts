@@ -2,11 +2,12 @@
 
 .sidebar {
   position: absolute;
-  top: 0;
+  top: 4.7rem;
   left: 0;
   bottom: 0;
-  padding: 12px;
-  width: 300px;
+  padding: 20px;
+  width: 330px;
+  height: auto;
   
 
   &__navigation {
@@ -17,12 +18,12 @@
     .logo {
       background: $bg-black;
       display: flex;
-      border-radius: 8px;
+      border-radius: 9px;
       padding: 16px 0 0 16px;
     }
 
     .logo img {
-      width: 80px;
+      width: 70px;
     }
   }
 

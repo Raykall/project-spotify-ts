@@ -9,7 +9,7 @@ const Home = () => {
   const { filterSearch } = useApplication();
 
   return (
-    <>
+    <div>
       <Sidebar />
       <Header />
       <div className={styles.playlist__container}>
@@ -26,7 +26,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

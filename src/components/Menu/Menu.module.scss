@@ -1,0 +1,12 @@
+.menu {
+    display: flex;
+    width: 100%;
+    padding: 35px;
+    overflow: hidden;
+    height: 20px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background-color: #121212;
+}
