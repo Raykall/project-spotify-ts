@@ -3,10 +3,9 @@ import Input from "components/Input";
 import { useState } from "react";
 
 const Form = () => {
-  const [nome, setNome] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-
   return (
     <form className={styles.form__subscribe}>
       <div>
@@ -17,10 +16,10 @@ const Form = () => {
                 <label>Nome</label>
               </div>
               <Input
-                value={nome}
-                label="Digite seu Nome"
-                type="text"
-                onChange={setNome}
+                type="name"
+                placeholder="Insira seu nome"
+                value={name}
+                onChange={setName}
               />
             </div>
             <div className={styles["form__subscribe-label"]}>
@@ -28,9 +27,9 @@ const Form = () => {
                 <label>Endereço de e-mail</label>
               </div>
               <Input
+                type="e-mail"
+                placeholder="dominio@exemplo.com"
                 value={email}
-                label="nome@dominio.com"
-                type="text"
                 onChange={setEmail}
               />
             </div>
@@ -39,9 +38,9 @@ const Form = () => {
                 <label>Senha</label>
               </div>
               <Input
+                type="senha"
+                placeholder="Insira sua senha"
                 value={senha}
-                label="Digite sua senha"
-                type="text"
                 onChange={setSenha}
               />
             </div>

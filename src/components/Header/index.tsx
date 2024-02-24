@@ -1,6 +1,7 @@
 import styles from "./Header.module.scss";
 import Search from "./Search";
 import Category from "./Category";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -14,7 +15,7 @@ const Header = () => {
         </button>
 
         <div className={styles.header__main}>
-          <Search  />
+          <Search />
         </div>
         <div className={styles.header__categories}>
           <Category />
@@ -22,7 +23,9 @@ const Header = () => {
       </div>
 
       <div className={styles.header__login}>
-        <button className={styles.subscribe}>Inscreva-se</button>
+        <button className={styles.subscribe}>
+          <Link to={"/subscribe"} className={styles.subscribe__link}>Inscreva-se</Link>
+        </button>
         <button className={styles.login}>Entrar</button>
       </div>
     </nav>

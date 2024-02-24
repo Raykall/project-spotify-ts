@@ -42,16 +42,22 @@
     align-items: center;
 
     .subscribe {
-      color: #a7a7a7;
       font-size: 16px;
       font-weight: 700;
       background-color: transparent;
       margin-right: 32px;
       border: none;
+      text-decoration: none;
+
+      &__link {
+        color: #a7a7a7;
+        text-decoration: none;
+      }
     }
     .subscribe:hover {
-      transform: scale(1.04);
+      transform: scale(1.09);
       color: $color-white;
+      text-decoration: none;
     }
 
     .login {
@@ -65,7 +71,7 @@
     }
 
     .login:hover {
-      transform: scale(1.04);
+      transform: scale(1.09);
     }
   }
 }

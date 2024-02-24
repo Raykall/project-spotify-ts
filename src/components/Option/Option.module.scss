@@ -85,4 +85,34 @@
       }
     }
   }
+
+  .option__space {
+    margin-top: 32px;
+  }
+
+  .option__paragraph {
+    display: flex;
+    justify-content: center;
+    border-top: #878787 1px solid;
+    gap: 10px;
+
+    span {
+      padding: 25px;
+      color: $color-white;
+      font-family: "Roboto", sans-serif;
+
+      label {
+        margin-right: 10px;
+        transform: scale(2.09);
+      }
+
+      .option__link-a {
+        color: $color-white;
+        text-decoration: none;
+        font-weight: 600;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    }
+  }
 }

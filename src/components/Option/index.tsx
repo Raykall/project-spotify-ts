@@ -30,10 +30,10 @@ const Option = () => {
         </a>
       </div>
       <div className={styles.option__space}></div>
-      <p>
+      <p className={styles.option__paragraph}>
         <span>
-          Já tem uma conta?
-          <a href="">Faça login aqui</a>
+          <label>Já tem uma conta?</label>
+          <a href="" className={styles["option__link-a"]}>Faça login aqui</a>
         </span>
       </p>
     </div>
