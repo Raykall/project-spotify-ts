@@ -1,4 +1,4 @@
-import styles from "./Initiation.module.scss";
+import styles from "./Home.module.scss";
 import ItemArtist from "components/ContentArtist";
 import ContentItens from "components/ContentItens";
 import Header from "components/Header";

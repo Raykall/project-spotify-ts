@@ -1,9 +1,10 @@
 @import "styles/variaveis";
+@import "styles/breakpoints";
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
   margin: 15px;
   border-radius: 8px;
   background-color: $bg-black;
@@ -72,6 +73,51 @@
 
     .login:hover {
       transform: scale(1.09);
+    }
+  }
+  .profile_info {
+    text-decoration: none;
+    color: $color-white;
+    padding: 15px;
+  }
+}
+
+@include breakpoint(tablet-only) {
+  .arrow-left,
+  .arrow-right {
+    display: none !important;
+  }
+
+  .header__login {
+    .subscribe {
+      margin-right: 13px !important;
+    }
+
+    .login {
+      width: 80px !important;
+    }
+  }
+}
+
+@include breakpoint(mobile-only) {
+  .header {
+    margin: 15px auto;
+    display: flex;
+
+    .arrow-left,
+    .arrow-right {
+      display: none !important;
+    }
+
+    .header__login {
+      .subscribe {
+        margin-right: 3px;
+      }
+  
+      .login {
+        width: 70px;
+        margin-right: 3px;
+      }
     }
   }
 }

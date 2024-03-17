@@ -91,10 +91,12 @@
   }
 
   .option__paragraph {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     border-top: #878787 1px solid;
     gap: 10px;
+    margin-bottom: 50px;
 
     span {
       padding: 25px;

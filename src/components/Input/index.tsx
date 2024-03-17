@@ -5,16 +5,19 @@ interface InputProps {
   placeholder: string;
   value: string;
   onChange: React.Dispatch<React.SetStateAction<string>>;
+  onBlur: () =>  void;
 }
 
-const Input = ({type, placeholder, value, onChange }: InputProps) => {
+const Input = ({type, placeholder, value, onChange, onBlur }: InputProps) => {
+
   return (
     <div className={styles["input-container"]}>
       <input
         type={type}
         placeholder={placeholder}
         value={value}
-        onChange={(event) => onChange(event.target.value)}
+        onChange={(e) => onChange(e.target.value)}
+        onBlur={onBlur}
       />
     </div>
   );

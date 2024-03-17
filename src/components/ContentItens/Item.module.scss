@@ -1,7 +1,34 @@
+@import "styles/breakpoints";
+
 .contentItens {
   display: grid;
-  justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 24px;
   height: 80vh;
+}
+
+@include breakpoint(desktop-only) {
+  .contentItens {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+  }
+}
+
+@include breakpoint(tablet-only) {
+  .contentItens {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+@include breakpoint(mobile-only) {
+  .contentItens {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    
+  }
 }

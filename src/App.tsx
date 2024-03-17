@@ -1,5 +1,5 @@
 import { ApplicationProvider } from "state/hooks/useApplication";
-import Router from "./routes";
+import Router from "./routes/routes";
 
 function App() {
   return (

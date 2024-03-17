@@ -1,19 +1,19 @@
-import Form from "components/Form";
-import styles from "./Subscribe.module.scss";
+import Subscribe from "components/Subscribe";
+import styles from "./PageSubscribe.module.scss";
 import Option from "components/Option";
 
-const Subscribe = () => {
+const PageSubscribe = () => {
   return (
     <section className={styles.subscribe}>
       <div className={styles.container__subscribe}>
         <header className={styles.header__subscribe}>
           <h1>Se inscreva e comece a curtir</h1>
         </header>
-        <Form />
+        <Subscribe />
         <Option />
       </div>
     </section>
   );
 };
 
-export default Subscribe;
+export default PageSubscribe;

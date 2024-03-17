@@ -1,4 +1,5 @@
 @import "styles/variaveis";
+@import "styles/breakpoints";
 
 .subscribe {
   box-sizing: border-box;
@@ -9,11 +10,6 @@
   justify-content: center;
   padding-bottom: 0px;
 
-  @media (min-width: 480px) {
-    .container__subscribe {
-      width: 324px;
-    }
-  }
   .container__subscribe {
     box-sizing: content-box;
     padding: 5px 32px;
@@ -21,20 +17,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
 
     .header__subscribe {
-      margin-bottom: 2px;
+      margin-bottom: 1px;
       text-align: center;
 
       h1 {
         box-sizing: border-box;
         margin-block: 0px;
-        font-size: 2.5rem;
-        font-weight: 700;
+        font-size: 2rem;
+        font-weight: 900;
         font-family: sans-serif, Arial, Helvetica, "Lucida Grande", Verdana;
         color: white;
       }
     }
   }
 }
+
+@include  breakpoint(mobile-only) {
+  .subscribe {
+
+    .container__subscribe {
+    overflow: hidden;
+    margin-bottom: 20px;
+    }
+  }}

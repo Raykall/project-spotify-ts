@@ -17,7 +17,7 @@ const Sidebar = () => {
             <img src="assets/icons/logo-spotify.png" alt="logo" />
           </a>
         </div>
-        <ul>
+        <ul className={styles.sidebar__ul}>
           <li>
             <a href="/#">
               <span>

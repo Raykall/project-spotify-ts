@@ -1,0 +1,253 @@
+@import "styles/variaveis";
+@import "styles/breakpoints";
+
+.modal-login {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 998;
+  overflow: hidden;
+
+  .container__modal {
+    top: 50%;
+    right: 25%;
+    width: 450px;
+    height: 360px;
+    padding: 45px;
+    transform: translate(-50%, -50%);
+    background-color: $color-white;
+    color: black;
+    z-index: 999;
+    position: fixed;
+    border-radius: 24px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .login__label {
+        font-size: 1.8rem;
+        font-weight: 800;
+        font-style: oblique;
+        color: orange;
+      }
+
+      .login__close {
+        display: flex;
+        justify-content: flex-end;
+        background: transparent;
+        border: none;
+        font-size: 22px;
+        color: #5e5e5e;
+        font-weight: 700;
+        cursor: pointer;
+      }
+    }
+
+    .form__login {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+      color: black;
+
+      &-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 360px;
+        label {
+          font-size: 24px;
+        }
+
+        input {
+          background-color: #878787;
+          color: black;
+        }
+      }
+
+      .button {
+        box-sizing: border-box;
+        position: relative;
+        padding: 7px 80px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-family: "Source Code Pro";
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 25px;
+        color: $text-color;
+        background-color: $btn-color;
+        box-shadow: $shadow-color 2px 2px 22px;
+        border-radius: 9999px;
+        z-index: 0;
+        overflow: hidden;
+        margin: 7px 5px;
+      }
+
+      button:focus {
+        outline-color: transparent;
+        box-shadow: $btn-color 2px 2px 22px;
+      }
+
+      .right::after,
+      button::after {
+        content: "Avançar";
+        display: block;
+        position: absolute;
+        white-space: nowrap;
+        padding: 38px auto;
+        pointer-events: none;
+      }
+
+      button::after {
+        font-weight: 200;
+        top: -30px;
+        left: -20px;
+      }
+
+      .right,
+      .left {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+      }
+      .right {
+        left: 66%;
+      }
+      .left {
+        right: 66%;
+      }
+      .right::after {
+        top: -30px;
+        left: calc(-66% - 20px);
+
+        background-color: $bg-color;
+        color: transparent;
+        transition: transform 0.4s ease-out;
+        transform: translate(0, -90%) rotate(0deg);
+      }
+
+      button:hover .right::after {
+        transform: translate(0, -47%) rotate(0deg);
+      }
+
+      button .right:hover::after {
+        transform: translate(0, -50%) rotate(-7deg);
+      }
+
+      button .left:hover ~ .right::after {
+        transform: translate(0, -50%) rotate(7deg);
+      }
+
+      button::before {
+        content: "";
+        pointer-events: none;
+        opacity: 0.6;
+        background: radial-gradient(
+            circle at 20% 35%,
+            transparent 0,
+            transparent 2px,
+            $text-color 3px,
+            $text-color 4px,
+            transparent 4px
+          ),
+          radial-gradient(
+            circle at 75% 44%,
+            transparent 0,
+            transparent 2px,
+            $text-color 3px,
+            $text-color 4px,
+            transparent 4px
+          ),
+          radial-gradient(
+            circle at 46% 52%,
+            transparent 0,
+            transparent 4px,
+            $text-color 5px,
+            $text-color 6px,
+            transparent 6px
+          );
+
+        width: 100%;
+        height: 300%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        animation: bubbles 5s linear infinite both;
+      }
+
+      @keyframes bubbles {
+        from {
+          transform: translate();
+        }
+        to {
+          transform: translate(0, -66.666%);
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(desktop-only) {
+  .modal-login {
+    .container__modal {
+      top: 50%;
+      right: 5%;
+    }
+  }
+}
+
+@include breakpoint(tablet-only) {
+  .modal-login {
+    .container__modal {
+      top: 50%;
+      right: 5%;
+    }
+  }
+}
+
+@include breakpoint(mobile-only) {
+  .modal-login {
+    .container__modal {
+      position: fixed;
+      top: 50%;
+      right: -10%;
+      margin: 10px auto;
+      width: 280px;
+      height: 310px;
+      padding: 14px;
+      border-radius: 20px;
+
+      .form__login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+  
+        &-input {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: auto;
+          label {
+            font-size: 20px;
+          }
+  
+          input {
+            background-color: #101010;
+            color: white;
+          }
+        }
+    }
+  }
+
+}
+}
