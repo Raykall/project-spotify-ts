@@ -75,11 +75,33 @@
       transform: scale(1.09);
     }
   }
-  .profile_info {
-    text-decoration: none;
-    color: $color-white;
-    padding: 15px;
+
+  .userLogin{
+    display: flex;
+    align-items: center;
+
+    .profile_info {
+      display: flex;
+      text-decoration: none;
+      color: $color-white;
+      padding: 15px;
+      margin-right: 0;
+    }
+  
+    .logout {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90px;
+      height: 40px;
+      color: $color-black;
+      font-size: 17px;
+      font-weight: 700;
+      border-radius: 40px;
+      border: none;
+    }
   }
+  
 }
 
 @include breakpoint(tablet-only) {

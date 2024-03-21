@@ -21,6 +21,10 @@ const Header = () => {
     setUserIsLogin(true);
   };
 
+  const handleLogOut = () => {
+    sessionStorage.removeItem("token");
+    setUserIsLogin(false);
+  };
 
   return (
     <nav className={styles.header}>
@@ -60,11 +64,14 @@ const Header = () => {
         </>
       )}
       {userIsLogin && (
-        <>
+        <div className={styles.userLogin}>
           <div >
             <Link to={""} className={styles.profile_info}>Minha Conta</Link>
           </div>
-        </>
+          <div>
+            <button className={styles.logout} onClick={handleLogOut}>Sair</button>
+          </div>
+        </div>
       )}
     </nav>
   );
